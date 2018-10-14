@@ -9,4 +9,4 @@ both command should return the node and npm version installed
 5. in the file data/dev.js, replace the login credentials with a valid username and password
 6. run the command "npm test --tag e2e".
 Note: This test was based on the assumption that Chrome browser is installed on the machine running 
-thesee tests
+these tests
