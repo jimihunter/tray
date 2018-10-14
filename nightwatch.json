@@ -1,0 +1,60 @@
+{
+    "src_folders" : ["tests"],
+    "output_folder" : "reports",
+    "custom_commands_path" : "custom-commands",
+    "custom_assertions_path" : "custom-assertions",
+    "page_objects_path" : "pages",
+    "globals_path" : "",
+    
+    "selenium" : {
+      "start_process" : true,
+      "server_path" : "node_modules/selenium-standalone/.selenium/selenium-server/3.12.0-server.jar",
+      "start_session" : true,
+      "log_path" : "log/",
+      "host": "127.0.0.1",
+      "port" : 4444,
+      "cli_args" : {
+        "webdriver.chrome.driver" : "node_modules/selenium-standalone/.selenium/chromedriver/2.41-x64-chromedriver",
+        "webdriver.gecko.driver" : "node_modules/selenium-standalone/.selenium/geckodriver/0.20.1-x64-geckodriver",
+        "webdriver.edge.driver" : "node_modules/selenium-standalone/.selenium/iedriver/3.12.0-x64-IEDriverServer.exe"
+      }
+    },
+  
+    "test_settings" : {
+      "default" : {
+        "launch_url" : "https://app.tray.io",
+        "selenium_port"  : 4444,
+        "selenium_host"  : "localhost",
+        "silent": true,
+        "screenshots" : {
+          "enabled" : false,
+          "path" : ""
+        },
+        "desiredCapabilities": {
+          "browserName": "chrome",
+          "marionette": true,
+          "javascriptEnabled": true,
+          "acceptSslCerts": true
+        },
+        "globals": {
+          "waitForConditionTimeout" : 50000,
+          "abortOnAssertionFailure" : false,
+          "waitForConditionPollInterval" : 300,
+          "retryAssertionTimeout" : 5000
+        }
+       
+      },
+  
+      "chrome" : {
+        "desiredCapabilities": {
+          "browserName": "chrome"
+        }
+      },
+  
+      "edge" : {
+        "desiredCapabilities": {
+          "browserName": "MicrosoftEdge"
+        }
+      }
+    }
+  }
