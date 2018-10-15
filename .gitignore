@@ -1,5 +1,5 @@
-/*.log
+*/*.log
 node_modules
 package-lock.json
-/*ev.js
+*/*ev.js
 .vscode
